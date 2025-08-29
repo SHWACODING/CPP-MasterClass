@@ -1,2 +1,2 @@
-# C-MasterClass
+# CPP-MasterClass
 This A Comprehensive Course of CPP Learning ALL Data Structure From Scratch, DP, Graph theory, Sorting Techniques, Math, Recursion, Divide and Conquer....
