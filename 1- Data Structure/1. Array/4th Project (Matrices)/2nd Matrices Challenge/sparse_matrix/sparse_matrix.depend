@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1720304712 source:d:\c++\datastructure & algorithms\array\4th project (matrices)\2nd matrices challenge\sparse_matrix\main.cpp
+	<iostream>
+	<math.h>
+

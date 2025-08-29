@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1723110320 source:d:\c++\datastructure & algorithms\stack\1st project\stackbasics\main.cpp
+	<iostream>
+	<cstring>
+
+1723220223 source:d:\c++\datastructure & algorithms\stack\1st project\stackbasics\main_clang.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1729513670 source:d:\c++\datastructure & algorithms\tree\basic tree\1st project\bst\main.cpp
+	<iostream>
+	<stack>
+
+1729512643 source:d:\c++\datastructure & algorithms\tree\basic tree\1st project\bst\main_c-lang.c
+
+1729513838 source:d:\c++\datastructure & algorithms\tree\binary search tree\1st project\bst\main.cpp
+	<iostream>
+	<stack>
+
+1729512643 source:d:\c++\datastructure & algorithms\tree\binary search tree\1st project\bst\main_c-lang.c
+

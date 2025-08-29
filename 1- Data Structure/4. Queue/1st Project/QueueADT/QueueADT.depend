@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1728465666 source:d:\c++\datastructure & algorithms\stack\1st project\queueadt\main.cpp
+	<iostream>
+
+1728464225 source:d:\c++\datastructure & algorithms\stack\1st project\queueadt\main_clang.c
+	<stdio.h>
+	<stdlib.h>
+

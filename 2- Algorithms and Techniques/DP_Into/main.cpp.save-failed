@@ -1,0 +1,213 @@
+#include <bits/stdc++.h>
+
+#define dpp(arr, val) memset(arr, val, sizeof(arr))
+
+typedef long long ll;
+
+using namespace std;
+
+
+const int sz = 1e4 + 10;
+ll dp[sz];
+
+// ------------------------------------------------------------------------------------
+
+//// Fibonacci Problem Without Using DP ??
+//ll Fib (int n)
+//{
+//    if (n == 0 || n == 1)
+//        return n;
+//
+//    return fib(n - 1) + fib (n - 2);
+//}
+
+ll DP_Fib (int n)
+{
+    if (n == 0 || n == 1)
+        return n;
+
+    if (dp[n] != -1)
+        return dp[n];
+
+    // This Line For Saving The Values of Tree Of Recursion To Save From Repeating
+    // And This is the Main Benefit of DP ??
+    dp[n] = DP_Fib(n - 1) + DP_Fib(n - 2);
+
+    return dp[n];
+}
+
+// ------------------------------------------------------------------------------------
+
+//// https://www.spoj.com/problems/FARIDA/
+
+ll arr[sz];
+ll f;
+
+ll PrincessFarida (int i)
+{
+    if (i >= f) { return 0; }
+
+    if (dp[i] != -1) { return dp[i]; }
+
+    dp[i] = max(PrincessFarida(i + 1), PrincessFarida(i + 2) + arr[i]);
+
+    return dp[i];
+}
+
+// ------------------------------------------------------------------------------------
+
+//// https://atcoder.jp/contests/dp/tasks/dp_a
+
+ll h[sz];
+ll fr1;
+
+ll Frog1 (ll i)
+{
+    if (i == fr1 - 1) { return 0; } // Reach The End ??
+
+    if (dp[i] != -1) { return dp[i]; }
+
+    dp[i] = min(Frog1(i + 1) + abs(h[i + 1] - h[i]), dp[i]);
+
+    if (i + 2 <= fr1 - 1)
+        dp[i] = min(Frog1(i + 2) + abs(h[i + 1] - h[i]), dp[i]);
+
+    return dp[i];
+}
+
+// ------------------------------------------------------------------------------------
+
+//// https://atcoder.jp/contests/dp/tasks/dp_b
+
+
+// ------------------------------------------------------------------------------------
+
+//// https://atcoder.jp/contests/dp/tasks/dp_c
+
+
+
+// ------------------------------------------------------------------------------------
+
+//// https://atcoder.jp/contests/dp/tasks/dp_d
+
+// ------------------------------------------------------------------------------------
+
+//// https://atcoder.jp/contests/dp/tasks/dp_e
+
+// ------------------------------------------------------------------------------------
+
+
+int main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+
+//// Fibonacci Recursive DP ??
+
+//    int n;
+//    cin >> n;
+//
+//    dpp (dp, -1); // Initialize all dp[] values to -1 ??
+//
+//    cout << DP_Fib(n) << endl;
+//
+//    // Fibonacci Iterative DP ??
+//    dpp(dp, -1);
+//    dp[0] = 0; // Handle 0, 1 (Base Cases) ??
+//    dp[1] = 1;
+//
+//    for (int i = 2; i <= n; ++i)
+//        dp[i] = dp[i - 1] + dp[i - 2];
+//
+//    cout << dp[n] << endl;
+
+// ------------------------------------------------------------------------------------
+
+//// https://www.spoj.com/problems/FARIDA/
+
+//    // DP Recursive Code ??
+//    int T;
+//    cin >> T;
+//    int k = 1;
+//
+//    while (T--) {
+//        dpp (dp, -1);
+//
+//        cin >> f;
+//
+//        for (int i = 0; i < f; ++i) {
+//            cin >> arr[i];
+//        }
+//
+//        cout << "Case " << k++ << ": " << PrincessFarida(0) << endl;
+//    }
+
+// -----------------------------------------------------
+
+    // DP Iterative Code ??
+//    int T;
+//    cin >> T;
+//
+//    int k = 1;
+//
+//    while (T--) {
+//        cin >> f;
+//        for (int i = 0; i< f; ++i)
+//            cin >> arr[i];
+//
+//        dpp(dp, -1);
+//        dp[f] = 0;
+//
+//        for (ll i = f - 1; i >= 0; --i) {
+//            dp[i] = max(dp[i], dp[min(i + 1, f)]);
+//            dp[i] = max(dp[i], dp[min(i + 2, f)] + arr[i]);
+//        }
+//
+//        cout << "Case " << k++ << ": " << dp[0] << endl;
+//    }
+
+// ------------------------------------------------------------------------------------
+
+//// https://atcoder.jp/contests/dp/tasks/dp_a
+
+    cin >> fr1;
+    for (int i = 0; i < fr1; ++i) {
+        cin >> h[i];
+    }
+
+    dpp(dp[i], -1);
+
+    cout << Frog1(0) << endl;
+
+// ------------------------------------------------------------------------------------
+
+//// https://atcoder.jp/contests/dp/tasks/dp_b
+
+
+// ------------------------------------------------------------------------------------
+
+//// https://atcoder.jp/contests/dp/tasks/dp_c
+
+
+// ------------------------------------------------------------------------------------
+
+//// https://atcoder.jp/contests/dp/tasks/dp_d
+
+
+// ------------------------------------------------------------------------------------
+
+//// https://atcoder.jp/contests/dp/tasks/dp_e
+
+
+// ------------------------------------------------------------------------------------
+
+
+// ------------------------------------------------------------------------------------
+
+
+// ------------------------------------------------------------------------------------
+
+
+    return 0;
+}
